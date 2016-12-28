@@ -4,8 +4,8 @@ var webpack = require('webpack');
 module.exports = {
     devServer: {
         inline: true,
-        contentBase: './src',
-        port: 3000
+        contentBase: './build',
+        port: 3001
     },
     devtool: 'cheap-module-eval-source-map',
     entry: './dev/js/index.js',
@@ -23,8 +23,8 @@ module.exports = {
         ]
     },
     output: {
-        path: 'src',
-        filename: 'js/bundle.min.js'
+        path: 'build',
+        filename: 'js/main.min.js'
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
